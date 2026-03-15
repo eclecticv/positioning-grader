@@ -1,0 +1,8 @@
+{
+  "name": "positioning-audit",
+  "version": "1.0.0",
+  "description": "Analyze B2B SaaS homepages against 9 positioning checks from Dunford and Fletch PMM frameworks. Command: audit.",
+  "author": {
+    "name": "And/or Labs"
+  }
+}

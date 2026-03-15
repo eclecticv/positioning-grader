@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "andorlabs",
+  "metadata": {
+    "description": "And/or Labs - AI x GTM tools for B2B startups"
+  },
+  "owner": {
+    "name": "And/or Labs",
+    "email": "hello@andorlabs.com"
+  },
+  "plugins": [
+    {
+      "name": "positioning-audit",
+      "description": "Analyze B2B SaaS homepages against 9 positioning checks from April Dunford's Obviously Awesome and Fletch PMM's homepage teardown methodology. Full citations, PASS/FAIL verdicts, actionable fixes.",
+      "version": "1.0.0",
+      "author": {
+        "name": "And/or Labs"
+      },
+      "source": "./",
+      "category": "marketing",
+      "tags": ["positioning", "b2b", "saas", "homepage", "dunford", "fletch", "marketing", "strategy"],
+      "homepage": "https://github.com/eclecticv/positioning-audit"
+    }
+  ]
+}
