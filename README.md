@@ -1,23 +1,25 @@
-# positioning-audit
+# positioning-grader
 
-Analyze B2B SaaS homepages against 9 positioning checks from April Dunford and Fletch PMM. Full framework citations, PASS/FAIL verdicts, actionable fixes.
+Analyze B2B SaaS homepages against 9 positioning checks from April Dunford and Fletch PMM. Full framework citations, PASS/FAIL verdicts, actionable fixes, and repositioning strategies.
 
 ## Install
 
 ```bash
-claude /install eclecticv/positioning-audit
+claude /install eclecticv/positioning-grader
 ```
 
 Or load for a single session:
 ```bash
-claude --plugin-dir /path/to/positioning-audit
+claude --plugin-dir /path/to/positioning-grader
 ```
 
 ## Commands
 
 | Command | Usage | What it does |
 |---------|-------|-------------|
-| **audit** | `/positioning-audit:audit <url>` | 9-check positioning analysis with full report |
+| **audit** | `/positioning-grader:audit <url>` | Run 9 positioning checks, print scorecard on screen |
+| **plan** | `/positioning-grader:plan <url>` | Generate 3 repositioning strategies + homepage section layout |
+| **export** | `/positioning-grader:export <url>` | Write full 9-check detailed report to markdown file |
 
 ## What It Checks
 
@@ -43,6 +45,16 @@ Based on Fletch PMM's homepage teardown methodology (2020-2024):
 | FQ-2 | "Who is it for?" explicitly stated |
 | FQ-3 | "What does it replace?" made clear |
 | FQ-4 | "Why is it better?" demonstrated |
+
+## The Plan Command
+
+The `plan` command goes beyond audit findings to generate actionable repositioning strategies:
+
+- **Strategy A** — Different Category: Reframe the product into a category where its strengths shine
+- **Strategy B** — Different Audience: Sharpen the ICP to a segment that values the unique attributes most
+- **Strategy C** — Different Competitive Alternative: Change what the product is compared against
+
+Each strategy includes a concrete headline, value proposition, proof points, and risk assessment. The top-ranked strategy gets a full homepage section layout with specific content and persuasion logic.
 
 ## Output Format
 

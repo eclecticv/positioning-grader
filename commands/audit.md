@@ -1,10 +1,10 @@
 # Command: audit
 
-Analyze a B2B SaaS homepage against 9 positioning checks drawn from Dunford and Fletch PMM. Export a comprehensive markdown report covering every single check.
+Analyze a B2B SaaS homepage against 9 positioning checks drawn from Dunford and Fletch PMM. Print results on screen.
 
 ## Usage
 ```
-/positioning-audit:audit <url>
+/positioning-grader:audit <url>
 ```
 
 ## What It Does
@@ -19,7 +19,6 @@ Analyze a B2B SaaS homepage against 9 positioning checks drawn from Dunford and 
    - `skills/positioning/reference/dunford-canvas.md` (DC-1 to DC-5)
    - `skills/positioning/reference/fletch-questions.md` (FQ-1 to FQ-4)
 4. **Score every single check** as PASS, FAIL, or N/A based on what you observed
-5. **Write the full analysis** to a markdown file in the current directory
 
 ## Scoring Rules
 
@@ -50,81 +49,38 @@ Analyze a B2B SaaS homepage against 9 positioning checks drawn from Dunford and 
 
 ## Output
 
-Write a markdown file to the current working directory named `[company-name-lowercase]-positioning.md`.
+**Print results directly on screen (do NOT write to a file).**
 
-The file must follow this EXACT structure:
-
-```markdown
-# Positioning Audit: [Company Name]
-
-**URL:** [url]
-**Date:** [date]
-**Overall Score:** [total pass]/[total applicable] ([overall grade])
-
----
-
-## Summary
-
-| Section | Score | Grade |
-|---------|-------|-------|
-| Dunford Canvas | X/Y | [grade] |
-| Fletch Questions | X/Y | [grade] |
-
----
-
-## 1. Dunford Canvas ([X/Y] — [Grade])
-
-### DC-1: Competitive Alternatives Acknowledged
-
-**What it is:** [Copy from reference — word for word]
-
-**Why it matters:** [Copy from reference — word for word]
-
-**Source:** [Copy from reference — word for word]
-
-**Compliance:** PASS | FAIL | N/A
-
-**Observation:** [What you actually observed — quote the headline, describe what you saw]
-
-**How to fix:** [Only if FAIL. Concrete, actionable recommendation.]
-
----
-
-[...repeat for every check...]
-
-## 2. Fletch Questions ([X/Y] — [Grade])
-
-[...every FQ check...]
-```
-
-## Critical Rules for the Output
-
-1. **Every single check gets its own section** — no exceptions
-2. **"What it is" and "Why it matters" are copied word-for-word** from the reference files
-3. **"Source" is the full citation** from the reference files
-4. **"Observation" is specific** — never say "vague headline." Say what the headline actually says.
-5. **"How to fix" is actionable** — say exactly what the headline should say instead
-6. **N/A checks are still listed** — show the check, mark N/A, explain why
-7. **Section grades count only applicable items** — N/A excluded from denominator
-8. **The horizontal rule `---` separates every check**
-
-## After Writing the File
+Display the following format in the terminal:
 
 ```
-AUDIT COMPLETE: [Company Name]
-File: [filename].md (9 checks evaluated)
+AUDIT: [Company Name] — [total pass]/[total applicable] passing ([overall grade])
 
   Dunford Canvas        [grade]  (X/Y)
   Fletch Questions      [grade]  (X/Y)
 
-  OVERALL               [grade]  (X/Y passing)
+CRITICAL:
+  - [Check ID]: [observation] → [fix]
+  - [Check ID]: [observation] → [fix]
 
-Open [filename].md for the full analysis.
+WARNINGS:
+  - [Check ID]: [observation] → [fix]
+
+Run /positioning-grader:plan for 3 repositioning strategies + homepage layout
+Run /positioning-grader:export for full detailed report
 ```
+
+### Output Rules
+
+1. **Scorecard first** — the summary table is the first thing the user sees
+2. **CRITICAL section** — list FAILs that most damage positioning clarity (FQ-1, DC-1, DC-5 are typically highest impact)
+3. **WARNINGS section** — list remaining FAILs, one line each
+4. **Keep it scannable** — each finding is one line: Check ID, what's wrong, what to do
+5. **No file output** — everything goes to the terminal
+6. **Be specific in observations** — quote the actual headline, describe what you saw
 
 ## Notes
 
 - **IMPORTANT: Do NOT use the browser MCP for screenshots.** Always use local headless Chrome via the Bash tool instead.
 - Only the homepage is analyzed — positioning is a homepage concern
 - If Chrome is not installed, proceed with text-only analysis
-- The `.md` file should be a complete, standalone document suitable for sharing

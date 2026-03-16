@@ -10,16 +10,16 @@
   },
   "plugins": [
     {
-      "name": "positioning-audit",
-      "description": "Analyze B2B SaaS homepages against 9 positioning checks from April Dunford's Obviously Awesome and Fletch PMM's homepage teardown methodology. Full citations, PASS/FAIL verdicts, actionable fixes.",
-      "version": "1.0.0",
+      "name": "positioning-grader",
+      "description": "Analyze B2B SaaS homepages against 9 positioning checks from April Dunford's Obviously Awesome and Fletch PMM's homepage teardown methodology. Audit prints scorecard, plan generates 3 repositioning strategies with homepage layout, export writes full report.",
+      "version": "2.0.0",
       "author": {
         "name": "And/or Labs"
       },
       "source": "./",
       "category": "marketing",
       "tags": ["positioning", "b2b", "saas", "homepage", "dunford", "fletch", "marketing", "strategy"],
-      "homepage": "https://github.com/eclecticv/positioning-audit"
+      "homepage": "https://github.com/eclecticv/positioning-grader"
     }
   ]
 }
