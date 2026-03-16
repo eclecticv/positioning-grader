@@ -1,3 +1,16 @@
+---
+name: positioning-grader
+description: >
+  This skill should be used when the user asks to analyze, audit, grade, score,
+  or review a B2B SaaS homepage for positioning quality. Triggers include
+  "grade my homepage", "audit my positioning", "how is my positioning",
+  "generate a positioning plan", "export a positioning report",
+  "repositioning strategies", "homepage section layout", or mentions
+  April Dunford, Obviously Awesome, Fletch PMM, homepage teardown,
+  competitive alternatives, value proposition clarity, "what is it test",
+  "who is it for", positioning framework.
+---
+
 # Positioning Grader
 
 A framework-backed analysis tool that scores B2B SaaS homepages against 9 positioning checks drawn from April Dunford's *Obviously Awesome* and Fletch PMM's homepage teardown methodology.
@@ -29,23 +42,7 @@ What is it?, Who is it for?, What does it replace?, Why is it better?
 
 ## Scoring
 
-Each section receives a letter grade (A+ through F) based on the percentage of applicable items that pass. Items marked N/A are excluded from the denominator.
-
-| Grade | Pass Rate |
-|-------|-----------|
-| A+    | 100%      |
-| A     | 90-99%    |
-| A-    | 85-89%    |
-| B+    | 80-84%    |
-| B     | 75-79%    |
-| B-    | 70-74%    |
-| C+    | 65-69%    |
-| C     | 60-64%    |
-| C-    | 55-59%    |
-| D+    | 50-54%    |
-| D     | 45-49%    |
-| D-    | 40-44%    |
-| F     | Below 40% |
+Each section receives a letter grade (A+ through F) based on the percentage of applicable items that pass. N/A items are excluded from the denominator. See `reference/shared-procedures.md` for the full grading scale, scoring rules, and crawl/screenshot procedure.
 
 ## Output Format
 

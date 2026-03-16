@@ -1,3 +1,9 @@
+---
+description: Generate 3 viable repositioning strategies with homepage section layout recommendations from a 9-check positioning audit
+argument-hint: <website-url>
+allowed-tools: Read, Bash, WebFetch
+---
+
 # Command: plan
 
 Run the 9-check positioning audit, then generate 3 viable repositioning strategies and a recommended homepage section layout.
@@ -9,11 +15,11 @@ Run the 9-check positioning audit, then generate 3 viable repositioning strategi
 
 ## What It Does
 
-1. **Run the full audit internally** — follow all steps from the `audit` command (crawl homepage, screenshot, read both reference files, score all 9 checks)
-2. **Analyze the audit findings** to identify positioning gaps and opportunities
-3. **Generate 3 distinct repositioning strategies** using Dunford's framework
-4. **Recommend a homepage section layout** for each strategy
-5. **Rank strategies** by feasibility and impact
+1. **Follow the crawl & screenshot procedure** in `skills/positioning/reference/shared-procedures.md`
+2. **Apply the scoring rules and grading scale** from the same shared procedures file
+3. **Analyze the audit findings** to identify positioning gaps and opportunities
+4. **Generate 3 distinct repositioning strategies** using Dunford's framework
+5. **Recommend a homepage section layout** for the top-ranked strategy
 6. **Print the strategy on screen**
 
 ## Strategy Generation
@@ -53,8 +59,6 @@ The layout should follow conversion best practices:
 ## Output
 
 **Print results directly on screen (do NOT write to a file).**
-
-Display the following format in the terminal:
 
 ```
 POSITIONING PLAN: [Company Name]
@@ -116,10 +120,3 @@ Run /positioning-grader:export for the full 9-check detailed report
 5. **Rank with reasoning** — explain why one strategy is the best fit based on what was observed
 6. **Be honest about risks** — every positioning choice has trade-offs
 7. **No file output** — everything goes to the terminal
-
-## Notes
-
-- **IMPORTANT: Do NOT use the browser MCP for screenshots.** Always use local headless Chrome via the Bash tool instead.
-- Only the homepage is analyzed — positioning is a homepage concern
-- If Chrome is not installed, proceed with text-only analysis
-- The strategies should be immediately actionable — a founder should be able to read this and brief a designer/copywriter
