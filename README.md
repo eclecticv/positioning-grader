@@ -5,7 +5,7 @@ Analyze B2B SaaS homepages against 9 positioning checks from April Dunford and F
 ## Install
 
 ```bash
-claude /install eclecticv/positioning-grader
+claude /install positioning-grader@andorlabs
 ```
 
 Or load for a single session:
