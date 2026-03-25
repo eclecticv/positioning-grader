@@ -1,7 +1,7 @@
 {
   "name": "positioning-grader",
-  "version": "2.0.0",
-  "description": "Analyze B2B SaaS homepages against 9 positioning checks from Dunford and Fletch PMM frameworks. Commands: audit, plan, export.",
+  "version": "3.0.0",
+  "description": "Analyze B2B SaaS homepages against 9 positioning checks from Dunford and Fletch PMM frameworks. One command: /positioning-grader:positioning",
   "author": {
     "name": "And/or Labs"
   }

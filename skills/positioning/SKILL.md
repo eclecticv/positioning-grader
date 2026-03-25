@@ -23,10 +23,13 @@ Analyze a B2B SaaS homepage against the Dunford Canvas and Fletch Questions. For
 
 ## How It Works
 
+One command does everything — `/positioning-grader:positioning <url>`:
+
 1. **Crawl** the homepage via WebFetch (text content extraction)
-2. **Screenshot the homepage** using local headless Chrome (full-page capture)
+2. **Screenshot the homepage** using local headless Chrome (above-the-fold capture)
 3. **Score every check** — all 9 items, each as PASS, FAIL, or N/A
-4. **Export** a comprehensive `.md` report covering every check with full context
+4. **Print** a scorecard to the terminal
+5. **Write** a comprehensive `.md` report with 3 repositioning strategies to `~/Desktop/claude-code/`
 
 Only the homepage is analyzed — positioning is a homepage concern.
 

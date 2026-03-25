@@ -1,14 +1,14 @@
 # Shared Procedures
 
-Common procedures used by all positioning-grader commands (audit, plan, export).
+Common procedures used by the `/positioning-grader:positioning` command.
 
 ## Crawl & Screenshot Procedure
 
-1. **Crawl the homepage** via WebFetch to extract text content
+1. **Crawl the homepage** via WebFetch to extract text content (if the page content exceeds 50KB, work with the first 50KB only)
 2. **Screenshot the homepage** using local headless Chrome (NOT the browser MCP):
    - Find Chrome: `which google-chrome-stable 2>/dev/null || which google-chrome 2>/dev/null || which chromium 2>/dev/null || ls "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" 2>/dev/null`
-   - Screenshot: `"/path/to/chrome" --headless --disable-gpu --no-sandbox --screenshot="[company]-homepage.png" --window-size=1280,4000 "[url]"`
-   - Read the screenshot file using the Read tool to visually inspect it
+   - Screenshot: `"/path/to/chrome" --headless=new --disable-gpu --no-sandbox --screenshot="[company]-homepage.png" --window-size=1280,900 "[url]"`
+   - Read the screenshot file using the Read tool to visually inspect the above-the-fold area
    - Delete the screenshot file after inspection
 3. **Read the 2 reference files** to get the full checklist:
    - `skills/positioning/reference/dunford-canvas.md` (DC-1 to DC-5)
@@ -51,5 +51,6 @@ Extract the company name from the page title or domain, using the brand name onl
 ## Notes
 
 - **IMPORTANT: Do NOT use the browser MCP for screenshots.** Always use local headless Chrome via the Bash tool instead.
+- **IMPORTANT: Use `--headless=new` and `--window-size=1280,900`** — never use heights above 900px. The above-the-fold screenshot plus WebFetch text content is sufficient for all 9 checks. Larger screenshots cause excessive memory usage.
 - Only the homepage is analyzed — positioning is a homepage concern
 - If Chrome is not installed, proceed with text-only analysis

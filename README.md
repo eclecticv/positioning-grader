@@ -13,13 +13,13 @@ Or load for a single session:
 claude --plugin-dir /path/to/positioning-grader
 ```
 
-## Commands
+## Usage
 
-| Command | Usage | What it does |
-|---------|-------|-------------|
-| **audit** | `/positioning-grader:audit <url>` | Run 9 positioning checks, print scorecard on screen |
-| **plan** | `/positioning-grader:plan <url>` | Generate 3 repositioning strategies + homepage section layout |
-| **export** | `/positioning-grader:export <url>` | Write full 9-check detailed report to markdown file |
+```
+/positioning-grader:positioning <url>
+```
+
+One command does everything: scores all 9 checks, prints a scorecard to the terminal, and writes a full report with 3 repositioning strategies and homepage layout to `~/Desktop/claude-code/`.
 
 ## What It Checks
 
@@ -45,16 +45,6 @@ Based on Fletch PMM's homepage teardown methodology (2020-2024):
 | FQ-2 | "Who is it for?" explicitly stated |
 | FQ-3 | "What does it replace?" made clear |
 | FQ-4 | "Why is it better?" demonstrated |
-
-## The Plan Command
-
-The `plan` command goes beyond audit findings to generate actionable repositioning strategies:
-
-- **Strategy A** — Different Category: Reframe the product into a category where its strengths shine
-- **Strategy B** — Different Audience: Sharpen the ICP to a segment that values the unique attributes most
-- **Strategy C** — Different Competitive Alternative: Change what the product is compared against
-
-Each strategy includes a concrete headline, value proposition, proof points, and risk assessment. The top-ranked strategy gets a full homepage section layout with specific content and persuasion logic.
 
 ## Output Format
 
