@@ -11,11 +11,13 @@
 **PASS criteria:**
 - Homepage names or strongly implies what the customer would use instead (e.g., "Replace your spreadsheets," "Unlike [competitor]," "Stop doing X manually")
 - The competitive frame is realistic — not a strawman
+- The alternative named is what the customer actually uses today, not an aspirational comparison
 
 **FAIL criteria:**
 - No mention of alternatives, status quo, or what the product replaces
 - Only generic phrases like "the best solution" with no anchoring
 - Claims differentiation without establishing what it's differentiated from
+- Headline anchors against an aspirational brand ("Superhuman for X") rather than the actual competitive alternative the customer uses today (e.g., LinkedIn's native inbox, Excel, manual processes). Aspirational comparisons set quality expectations but don't acknowledge the real alternative. Note: if testimonials or supporting copy below the fold establish the real alternative, this can still PASS — but note the headline gap in the observation
 
 ---
 
@@ -96,3 +98,4 @@
 - No recognizable category — visitor has to guess what kind of product this is
 - Category is invented jargon that only insiders would understand (e.g., "revenue intelligence orchestration platform")
 - Multiple conflicting categories suggested on the same page
+- Category is set only through "X for Y" comparison ("Superhuman for X") rather than naming a recognizable category directly. If the page title, meta description, or supporting copy does name the category, this can still PASS — but note the borrowed framing as a strategic risk in the observation

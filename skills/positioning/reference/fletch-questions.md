@@ -17,6 +17,9 @@
 - Headline is a vague aspiration ("Unlock your potential," "The future of work")
 - Product function only becomes clear after scrolling or reading several sections
 - Requires industry knowledge to understand what's being sold
+- Headline uses "X for Y" borrowed positioning ("Superhuman for X," "Figma for Y") — the product's function is described via comparison to another brand, not self-described. If a visitor doesn't know the referenced brand, they don't know what the product does
+- Headline describes an outcome ("twice as fast") without stating the product's function (what it IS, not what it DOES for you)
+- The "what is it?" answer depends on reading testimonials, FAQ, or feature sections below the fold
 
 ---
 
